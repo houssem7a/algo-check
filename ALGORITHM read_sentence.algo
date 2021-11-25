@@ -1,0 +1,36 @@
+ALGORITHM read_sentence
+VAR
+    c: char;
+    ch: string;
+    I,J,K: int;
+BEGIN
+c='';
+ch='';
+I=1;
+J=1;
+K=0;
+write("give a character");
+read(c);
+WHILE (c<>'.') DO
+I=I+1;
+IF (c=' ') THEN
+    J=J+1;
+END_IF
+SWITCH (c) DO
+    case a :K=K+1;BREAK;
+    case e :K=K+1;BREAK;
+    case i :K=K+1;BREAK;
+    case o :K=K+1;BREAK;
+    case u :K=K+1;BREAK;
+    case y :K=K+1;BREAK;
+    default : 
+END_SWITCH
+ch=ch+c;
+write("give a character");
+read(c);
+END_WHILE
+write (ch,".");
+write("The length of the sentence is",I);
+write("The number of words in the sentence is",J);
+write("The number of vowels in the sentence is",K);
+END
